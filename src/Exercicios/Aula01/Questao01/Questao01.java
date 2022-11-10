@@ -16,8 +16,8 @@ public class Questao01 {
      */
 
     public static void main(String[] args) {
-        int[] period = new int[]{1, 2, 3};
-        long[] expenses = new long[]{7000, 10000, 13000};
+        int[] period = new int[]{1, 2, 3, 4};
+        long[] expenses = new long[]{10000, 17000, 23000, 10000};
 
         ResultadoTrimestral fromJanToMar = new ResultadoTrimestral(period, expenses);
 

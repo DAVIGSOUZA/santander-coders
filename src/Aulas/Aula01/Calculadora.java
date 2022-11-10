@@ -1,4 +1,4 @@
-package Paradigmas;
+package Aulas.Aula01;
 
 public class Calculadora {
     int a;

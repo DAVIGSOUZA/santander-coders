@@ -9,12 +9,12 @@ public class Questao02 {
      */
     public static void main(String[] args) {
         int age = 36;
-        double luckyNumber = (double) age + 0.023;
+        double luckyNumber = age + (float)0.023;
 
-//        Automatic casting
-//        Widening casting is done automatically when passing a smaller size type to a larger size type:
-//        source: https://www.w3schools.com/java/java_type_casting.asp
-        double luckyNumber2 = age + 1.023;
+//      Automatic casting
+//      Widening casting is done automatically when passing a smaller size type to a larger size type:
+//      source: https://www.w3schools.com/java/java_type_casting.asp
+        double luckyNumber2 = age + 1.023f;
 
         System.out.println("O número da sorte é: " + luckyNumber);
         System.out.println("O número da sorte é: " + luckyNumber2);
