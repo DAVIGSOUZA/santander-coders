@@ -1,5 +1,11 @@
 package Exercicios.Aula02.Complementar;
-
+/*
+ENUNCIADO
+    Faça um programa, que solicite ao usuário que informe o mês e o sistema deve imprimir o valor gasto do mês.
+    ->Considerações:
+        Utilizar enum
+        Criar um valor para cada mês
+ */
 public enum MonthExpenses {
     JANEIRO("janeiro", 1000),
     FEVEREIRO("fevereiro",1000),
