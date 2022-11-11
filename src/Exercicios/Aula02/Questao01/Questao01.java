@@ -14,5 +14,27 @@ ENUNCIADO
  */
 
 public class Questao01 {
+    public static void main(String[] args) {
+        String frase = "Janeiro: 1543, Fevereiro: 1222, Março: 1234";
+
+        String[] mesValor = frase.split(", ");
+
+        for (int i = 0; i < mesValor.length; i++) {
+            System.out.println(mesValor[i]);
+        }
+
+        Integer[] valores = new Integer[3];
+
+        Integer total = 0;
+
+        for (int i = 0; i < mesValor.length; i++) {
+            String[] parser = mesValor[i].split(": ");
+            valores[i] = Integer.parseInt(parser[1]);
+            total += valores[i];
+        }
+
+        System.out.println("Total: " + total);
+    }
+
 
 }
