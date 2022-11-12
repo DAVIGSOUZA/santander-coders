@@ -35,6 +35,4 @@ public class Questao01 {
 
         System.out.println("Total: " + total);
     }
-
-
 }
