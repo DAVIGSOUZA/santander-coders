@@ -25,6 +25,5 @@ public class Questao02 {
             listaNome[i] = " !" + listaNome[i];
             System.out.printf(listaNome[i]);
         }
-
     }
 }
