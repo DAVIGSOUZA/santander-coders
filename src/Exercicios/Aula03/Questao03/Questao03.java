@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 
 
-public class Questão03 {
+public class Questao03 {
     public static void main(String[] args) {
         String[] productNames = {"Coca-Cola", "Coca-Cola 0", "Pepsi", "Guaraná Antarctica", "Fanta Laranja", "Água"};
         float[] productPrices = {5, 4.5f, 4.4f, 3.5f, 4.23f, 2.5f};
