@@ -29,8 +29,6 @@ public class Questao03 {
 
         int choice = getInputWithScanner();
 
-//        System.out.printf("Você escolheu %s - R$ %s", productNames[choice - 1], productPrices[choice - 1]);
-
         switch (choice) {
             case 1 -> System.out.printf("%s - R$ %s", productNames[0], productPrices[0]);
             case 2 -> System.out.printf("%s - R$ %s", productNames[1], productPrices[1]);

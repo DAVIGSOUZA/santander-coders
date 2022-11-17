@@ -23,31 +23,20 @@ import java.util.Scanner;
 
 public class Questao01 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("Informe sua idade para saber se você pode votar.");
 
-        int idade = getInputWithScanner();
+        int idade = sc.nextInt();
+
+        sc.close();
 
         String requiredVote = "Voto obrigatório";
         String optionalVote = "Voto  facultativo";
         String notAllowed = "Sem direito a votar";
 
-        if (idade < 16 ) {
-            System.out.println(notAllowed);
-        } else if (idade >= 18 && idade <= 70) {
-            System.out.println(requiredVote);
-        } else {
-            System.out.println(optionalVote);
-        }
-
-    }
-
-    static int getInputWithScanner() {
-        Scanner sc = new Scanner(System.in);
-
-        int input = sc.nextInt();
-
-        sc.close();
-
-        return input;
+        if (idade < 16 ) System.out.println(notAllowed);
+        else if (idade >= 18 && idade <= 70) System.out.println(requiredVote);
+        else System.out.println(optionalVote);
     }
 }

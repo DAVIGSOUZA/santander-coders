@@ -20,13 +20,11 @@ public class Questao04 {
 
         int choice = getInputWithScanner();
 
-        if (choice == 1) System.out.printf("%s - R$ %s", productNames[0], productPrices[0]);
-        if (choice == 2) System.out.printf("%s - R$ %s", productNames[1], productPrices[1]);
-        if (choice == 3) System.out.printf("%s - R$ %s", productNames[2], productPrices[2]);
-        if (choice == 4) System.out.printf("%s - R$ %s", productNames[3], productPrices[3]);
-        if (choice == 5) System.out.printf("%s - R$ %s", productNames[4], productPrices[4]);
-        if (choice == 6) System.out.printf("%s - R$ %s", productNames[5], productPrices[5]);
-        if (choice > 6 || choice < 1) throw new IllegalStateException("Escolha inválida: " + choice);
+        if (choice > 6 || choice < 1) {
+            throw new IllegalStateException("Escolha inválida: " + choice);
+        } else {
+            System.out.printf("Você escolheu %s - R$ %s", productNames[choice - 1], productPrices[choice - 1]);
+        }
     }
 
     static int getInputWithScanner() {
