@@ -1,5 +1,50 @@
 package Exercicios.Aula04.Questao01;
 
+/*
+    ENUNCIADO
+        Faça um programa para testar o exercicio do "Voto”, feito em casa.
+        O programa deve utilizar um array( pode ser bidimensional), onde devem estar armazenados
+        a entrada e o resultado do método, também conhecido como array de teste.
+        O programa deve percorrer o array de teste, enviando a entrada para o método e comparar
+        o resultado do método com o valor armazenado no array.
+
+        Caso o resultado do array seja igual ao método. Exibir a seguinte mensagem:
+            Teste (numero do teste) - Sucesso.
+
+        Caso o resultado do array seja diferente do método Exibir a seguinte mensagem:
+            Teste (numero do teste) - Falhou.
+
+        A execução da aplição deve ficar parecida com a forma abaixo.
+
+        Por exemplo:
+            Teste1 - Sucesso
+            Teste2 - Falha
+            Teste3 - Sucesso
+
+        Os testes devem conter:
+            3 casos “Não pode votar”
+            3 casos “Voto obrigatório”
+            3 casos “Voto opcional”
+
+        Observação:
+            Utilizar casos extremos que atinjam o começo e o fim de uma condição.
+
+        Por exemplo:
+            18 e 70 nos casos de "Voto obrigatório”
+            16 e 17 nos casos de "Voto opcional”
+
+        Extra:
+            Gravar o resultado de cada teste dentro de um array, para informar o resultado geral dos testes.
+
+            Caso todos os testes passem com sucesso:
+                Exibir a seguinte mensagem: "Testes executados com sucesso".
+
+            Caso algum dos testes falhe:
+                Exibir a mensagem com os testes que falharam:
+                Os seguintes testes falharam: Teste 1 - Resultado : "Obrigatorio" - Correto: "Não pode votar"
+ */
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +78,7 @@ public class Questao01 {
             System.out.println("PASSED");
             return true;
         } else {
-            System.out.println("FAIL");
+            System.out.printf("FAIL - returned %s \n", canVote(testCase));
             return false;
         }
     }
