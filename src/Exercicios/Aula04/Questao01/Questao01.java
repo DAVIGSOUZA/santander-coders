@@ -64,6 +64,24 @@ public class Questao01 {
         };
 
         testCanVote(cases, expected);
+
+        System.out.println("----------------------------");
+
+        TestCaseCanVote testCase = new TestCaseCanVote(16, "Voto facultativo");
+
+        testCanVote(testCase.getTestCase(), testCase.getExpectedOutput());
+
+        System.out.println("----------------------------");
+
+        TestCaseCanVote[] testCases = {
+                new TestCaseCanVote(19, "Sem direito a votar"),
+                new TestCaseCanVote(3, "Sem direito a votar"),
+                new TestCaseCanVote(16, "Voto facultativo"),
+                new TestCaseCanVote(18, "Voto obrigatório"),
+        };
+
+        testCanVote(testCases);
+
     }
 
     static String canVote(int age){
@@ -89,6 +107,17 @@ public class Questao01 {
         for (int i = 0; i < cases.length; i++) {
             System.out.printf("TEST CASE %s - ", i + 1);
             testResults[i] = testCanVote(cases[i],outputs[i]);
+        }
+
+        testReport(testResults);
+    }
+
+    static void testCanVote(TestCaseCanVote[] cases) {
+        boolean[] testResults = new boolean[cases.length];
+
+        for (int i = 0; i < cases.length; i++) {
+            System.out.printf("TEST CASE %s - ", i + 1);
+            testResults[i] = testCanVote(cases[i].getTestCase(),cases[i].getExpectedOutput());
         }
 
         testReport(testResults);
