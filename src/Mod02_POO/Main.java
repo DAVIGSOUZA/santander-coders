@@ -18,10 +18,13 @@ public class Main {
 
         contatoDavi.getPhones().forEach(phone -> System.out.println(phone.getNumber()));
 
-        System.out.println(contatoDavi.getPhones().stream().map(phone -> {
-            return phone.getCountryCode() + phone.getRegionCode() + phone.getNumber();
-        }).collect(Collectors.toList()));
+        System.out.println(contatoDavi.getPhones().stream().map(phone ->
+            phone.getCountryCode() + phone.getRegionCode() + phone.getNumber()
+        ).collect(Collectors.toList()));
 
+        contatoDavi.getPhones().forEach(phone -> System.out.println(phone.getNumber()));
+
+        contatoDavi.getPhones().forEach();
     }
 
 //    public static void addContact (Contact contact, List<Contact> contactList) {
@@ -29,4 +32,7 @@ public class Main {
 //    }
 
 //    pesquisar sobre strng builder
+//    pesquisar sobre stream
+
+//
 }
